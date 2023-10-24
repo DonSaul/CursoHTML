@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Personalización de colores con SASS */
+    $primary-color: #007BFF;
+    $secondary-color: #6C757D;
+
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .custom-navbar {
+      background-color: $primary-color;
+      color: #fff;
+    }
+
+    .custom-btn {
+      background-color: $primary-color;
+      border: none;
+    }
+
+    .custom-btn:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  </style>
+  <title>Ejemplo de Personalización de Bootstrap</title>
+</head>
+<body>
+
+<!-- Barra de Navegación Personalizada -->
+<nav class="navbar custom-navbar">
+  <a class="navbar-brand" href="#">Mi Sitio Personalizado</a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Inicio</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Acerca de Nosotros</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Servicios</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Contacto</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+  <h1 class="mt-5">Personalización de Bootstrap</h1>
+  <p>Este es un ejemplo de personalización de Bootstrap utilizando variables SASS para modificar el color principal y otros estilos. Puedes adaptar Bootstrap a tu identidad de marca y diseño específico de esta manera.</p>
+  <button class="btn custom-btn mt-3">Botón Personalizado</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

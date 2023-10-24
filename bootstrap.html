@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Ejemplo de Bootstrap Grid con Colores</title>
+  <style>
+    /* Estilos personalizados para las columnas */
+    .col-custom {
+      background-color: #2abb68; /* Azul */
+      color: #fff; /* Texto blanco */
+      padding: 10px;
+      border: 1px solid #2980b9;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="text-center">Ejemplo de Grid con Bootstrap</h1>
+  
+  <!-- Row 1: Divide en 3 columnas iguales -->
+  <div class="row">
+    <div class="col-4 col-custom">
+      <p>Columna 1 (4 columnas)</p>
+      <H1>Hola Mundo</H1>
+ 
+    </div>
+    <div class="col-4 col-custom">
+      <p>Columna 2 (4 columnas)</p>
+ 
+    </div>
+    <div class="col-4 col-custom">
+      <p>Columna 3 (4 columnas)</p>
+    </div>
+  </div>
+
+  <!-- Row 2: Divide en 2 columnas (mitad del ancho) -->
+  <div class="row">
+    <div class="col-6 col-custom">
+      <p>Columna 1 (6 columnas)</p>
+    </div>
+    <div class="col-6 col-custom">
+      <p>Columna 2 (6 columnas)</p>
+    </div>
+  </div>
+
+  <!-- Row 3: Columnas responsivas en diferentes tamaños de pantalla -->
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4 col-custom">
+      <p>Columna 1 (12 col / 6 col-md / 4 col-lg)</p>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 col-custom">
+      <p>Columna 2 (12 col / 6 col-md / 4 col-lg)</p>
+    </div>
+    <div class="col-12 col-md-12 col-lg-4 col-custom">
+      <p>Columna 3 (12 col / 12 col-md / 4 col-lg)</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
