@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Sencilla con Bootstrap</title>
+    <!-- Agrega la referencia al archivo CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados */
+        .calculator {
+            width: 300px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #aeadad;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h2 class="text-center">Calculadora Sencilla</h2>
+            <input type="text" id="display" class="form-control" disabled>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('7')">7</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('8')">8</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('9')">9</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-danger" onclick="clearDisplay()">C</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('4')">4</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('5')">5</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('6')">6</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-warning" onclick="calculateResult()">=</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('1')">1</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('2')">2</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('3')">3</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary" onclick="appendToDisplay('+')">+</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('0')">0</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('.')">.</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('-')">-</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-primary" onclick="appendToDisplay('*')">*</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-secondary" onclick="appendToDisplay('/')">/</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agrega la referencia al archivo JavaScript de Bootstrap y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        function appendToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function calculateResult() {
+            const displayValue = document.getElementById('display').value;
+            try {
+                const result = eval(displayValue);
+                document.getElementById('display').value = result;
+            } catch (error) {
+                document.getElementById('display').value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conceptos Básicos de JavaScript</title>
+</head>
+<body>
+    <h1>Conceptos Básicos de JavaScript</h1>
+
+    <h2>Variables</h2>
+    <p id="variable-demo">Este es un ejemplo de variable:</p>
+    <script>
+        // Variables
+        var nombre = "Juan";
+        document.getElementById("variable-demo").innerHTML += " Mi nombre es " + nombre;
+    </script>
+
+    <h2>Funciones</h2>
+    <p id="funcion-demo">Haz clic en el botón para ver una función en acción:</p>
+    <button onclick="saludar()">Saludar</button>
+    <script>
+        // Funciones
+        function saludar() {
+            var mensaje = "¡Hola, mi nombre es "+nombre;
+            document.getElementById("funcion-demo").innerHTML = mensaje;
+        }
+    </script>
+
+    <h2>Condicionales</h2>
+    <p id="condicional-demo">Haz clic en el botón para ver un condicional en acción:</p>
+    <button onclick="verificarEdad(18)">Verificar Edad</button>
+    <script>
+        // Condicionales
+        function verificarEdad(edad) {
+            if (edad >= 18) {
+                document.getElementById("condicional-demo").innerHTML = "Eres mayor de edad.";
+            } else {
+                document.getElementById("condicional-demo").innerHTML = "Eres menor de edad.";
+            }
+        }
+    </script>
+
+    <h2>Bucles</h2>
+    <p id="bucle-demo">Haz clic en el botón para ver un bucle en acción:</p>
+    <button onclick="contarHasta10()">Contar hasta 10</button>
+    <script>
+        // Bucles
+        function contarHasta10() {
+            var resultado = "";
+            for (var i = 1; i <= 10; i++) {
+                resultado += i + " ";
+            }
+            document.getElementById("bucle-demo").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
